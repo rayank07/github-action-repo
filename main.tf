@@ -1,13 +1,13 @@
 terraform {
   backend "s3" {
-    bucket = "rayankawsbucket"
+    bucket = "rayank-aws-bucket"
     key    = "github-action/terraform.tfstate"
-    region = "us-east-1"
+    region = "eu-west-1"
   }
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "eu-west-1"
 }
 
 resource "aws_instance" "example" {
